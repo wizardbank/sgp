@@ -1,0 +1,44 @@
+[
+  {
+    "title": "One Piece",
+    "status": "Ongoing",
+    "description": "In a world of pirates, Monkey D. Luffy embarks on a quest to find the legendary treasure, the 'One Piece' and become the Pirate King. Along the way, he gathers a diverse crew, the Straw Hat Pirates, and battles formidable foes while uncovering the secrets of the Grand Line.",
+    "mangadex": "#",
+    "cubari": "#"
+  },
+  {
+    "title": "Naruto",
+    "status": "Complete",
+    "description": "Naruto Uzumaki, a young ninja with dreams of becoming the strongest leader, the Hokage, faces the challenges of growing up as an orphan and being the host of the dangerous Nine-Tails Fox. Along with his friends, Naruto embarks on adventures, grows stronger, and fights to protect his village from various threats.",
+    "mangadex": "#",
+    "cubari": ""
+  },
+  {
+    "title": "Bleach",
+    "status": "Complete",
+    "description": "Ichigo Kurosaki, a teenager with the ability to see ghosts, is thrust into the world of Soul Reapers when he accidentally gains the powers of one. As a Soul Reaper, he defends the living world from evil spirits known as Hollows while uncovering hidden truths about his past and the soul society.",
+    "mangadex": "#",
+    "cubari": ""
+  },
+  {
+    "title": "Jujutsu Kaisen",
+    "status": "Complete",
+    "description": "Yuji Itadori, a kind-hearted high schooler with incredible physical abilities, is thrust into the deadly world of curses after consuming a powerful cursed object—one of Sukuna’s fingers. Now a host to the King of Curses, Yuji joins Tokyo Jujutsu High to fight malevolent spirits and uncover dark secrets lurking in the world of jujutsu sorcery.",
+    "mangadex": "#",
+    "cubari": "#"
+  },
+  {
+    "title": "Hunter x Hunter",
+    "status": "Hiatus",
+    "description": "Gon Freecss dreams of becoming a Hunter like his father—a prestigious adventurer licensed to explore, battle, and uncover rare secrets. Along the way, he befriends other aspiring Hunters like Killua, Leorio, and Kurapika, and faces increasingly dangerous trials that test his strength, resolve, and morality.",
+    "mangadex": "#",
+    "cubari": "#"
+  },
+  {
+    "title": "My Hero Academia",
+    "status": "Complete",
+    "description": "In a world where most people have superpowers called Quirks, Izuku Midoriya is born powerless—but still dreams of becoming a hero. After a chance encounter with the legendary All Might, he inherits the powerful Quirk 'One For All' and enrolls in U.A. High School to train as the next generation of heroes rise to face growing villain threats.",
+    "mangadex": "#",
+    "cubari": ""
+  }
+]
