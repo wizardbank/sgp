@@ -8,102 +8,182 @@
     <meta name="robots" content="noindex, nofollow" />
     <title>Dummy Scans</title>
 
-    <!-- External CSS Files -->
+    <!-- CSS -->
+    <!-- Font: Figtree (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="assets/icomoon/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <strong>Dummy Scans</strong>
-          </a>
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarMenu"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
+    <!-- Icon sprite: use with <svg class="icon"><use href="#icon-name"></use></svg> -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="icon-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+      </symbol>
+      <symbol id="icon-discord" viewBox="0 0 16 16">
+        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612" />
+      </symbol>
+      <symbol id="icon-mangadex" viewBox="0 0 310.85 265.11">
+        <path d="M279.05,168.65H53.3c-2.77,0-5.02-2.25-5.02-5.02s2.25-5.02,5.02-5.02h225.74c2.77,0,5.02,2.25,5.02,5.02s-2.25,5.02-5.02,5.02ZM279.05,187.67H53.3c-2.77,0-5.02-2.25-5.02-5.02s2.25-5.02,5.02-5.02h225.74c2.77,0,5.02,2.25,5.02,5.02s-2.25,5.02-5.02,5.02Z" />
+        <path d="M242.1,182.03v33.55l14.36-8.32,14.37,8.32v-33.54h-28.73Z" />
+        <path d="M309.38,102.27c-.18-.17-.37-.32-.56-.48-4.33-3.76-8-8.21-10.86-13.17l-.08-.15h0c-3.23-5.69-5.33-11.95-6.17-18.44-.03-.4-.09-.8-.13-1.2v-.08c-.36-2.29-1.33-4.43-2.8-6.22l-.41-.46c-12.03-13.53-27.88-23.09-45.46-27.42-.49-10.41,1.91-20.75,6.95-29.88.86-1.56.29-3.52-1.27-4.38-.48-.26-1.02-.4-1.57-.4h-.22c-22.23,3.6-42.96,13.51-59.72,28.55-9.78,8.75-18.04,19.07-24.44,30.53-4.75-2.55-9.69-4.74-14.77-6.55-15.2-5.44-31.4-7.48-47.47-5.98-12.36,1.11-24.43,4.32-35.71,9.48C28.97,72.34,3.47,107.09.33,148.08c-.22,2.83-.33,5.7-.33,8.57v27.72c0,4.8.71,9.42,2.03,13.76,3.57,11.75,11.55,21.66,22.26,27.66,6.52,3.66,13.98,5.83,21.95,6.04h70.42c.69-.05,1.39-.05,2.08,0,.11,0,.22,0,.34.03.18,0,.36.02.55.04,7.67.88,13.73,6.93,14.63,14.59.1.65.14,1.31.12,1.97v.31s0,.03,0,.03c.13,5.63,3.09,10.82,7.87,13.81,7.82,4.83,18.07,2.41,22.9-5.41,1.42-2.29,2.25-4.89,2.44-7.58.02-.22.03-.44.03-.66v-.93c0-5.68-.94-11.15-2.68-16.22-2.51-7.3-6.68-13.92-12.18-19.33-9.34-9.21-21.93-14.38-35.05-14.37h-58.71c-.14.02-.28.02-.43.02-.14,0-.28,0-.43-.02-13.66-.22-24.62-11.36-24.61-25.02,0-13.83,11.2-25.04,25.03-25.05h223.87c5.64,0,10.63-3.64,12.37-9l.17-.6c.78-2.52,2.32-4.72,4.34-6.32l.03-.02c.16-.14.32-.26.5-.38.23-.17.46-.33.7-.47,8.99-6.7,12.57-18.46,8.85-29.03v.02ZM279.48,92.28c-.52,0-1.04-.13-1.5-.38-3.69-2.13-8.03-2.85-12.2-2.01-1.82.34-3.53.98-5.1,1.84l-.07.05c-.1.03-.19.09-.27.15-1.59.72-3.47.01-4.19-1.58-.62-1.36-.19-2.97,1.01-3.86l.31-.19c7.28-4.09,16.17-4.09,23.45,0l.31.19c1.45.96,1.85,2.91.89,4.36-.59.88-1.58,1.41-2.64,1.41Z" />
+      </symbol>
+      <symbol id="icon-baka-updates" viewBox="0 0 500 500">
+        <path d="M479.36,404.19c0,7.94-.57,16.07-1.7,24.38-1.13,8.32-3.4,15.88-6.8,22.68-3.4,6.81-8.13,12.48-14.18,17.01-6.05,4.54-13.99,6.8-23.81,6.8-12.1,0-21.36-3.78-27.79-11.34-6.05-7.56-10.21-16.82-12.47-27.79-3.78-18.15-6.24-36.29-7.37-54.43-.76-18.15-1.51-36.48-2.27-55-.38-18.52-1.32-36.86-2.84-55-1.51-18.15-4.54-36.29-9.07-54.43-4.16,14.37-8.51,28.74-13.04,43.11-4.54,14.37-9.45,28.54-14.75,42.54-4.16,10.21-8.32,20.6-12.47,31.19-3.78,10.21-7.18,20.6-10.21,31.19-2.65,8.69-4.92,17.58-6.8,26.65-1.89,9.07-3.97,17.96-6.24,26.65-.76,3.4-1.89,7.75-3.4,13.04-1.51,4.92-3.4,10.02-5.67,15.31-1.89,5.29-3.97,10.21-6.24,14.75s-4.73,7.94-7.37,10.21c-6.05,5.29-13.23,8.88-21.55,10.77-7.94,2.27-15.69,3.4-23.25,3.4-12.1,0-21.74-4.35-28.92-13.04-7.18-8.69-12.47-18.33-15.88-28.92-2.65-7.94-4.73-15.88-6.24-23.81-1.51-8.32-3.21-16.44-5.1-24.38-4.92-21.55-10.77-42.72-17.58-63.52-6.43-20.79-12.47-41.97-18.15-63.52-7.56,17.01-14.36,34.02-20.41,51.02-5.67,17.01-9.64,34.59-11.91,52.74-1.89,13.23-3.02,26.65-3.4,40.25,0,13.23-1.7,26.47-5.1,39.71-2.65,9.83-6.99,17.39-13.04,22.68-5.67,5.67-13.8,8.51-24.38,8.51-9.83,0-17.96-2.08-24.38-6.24-6.43-3.78-11.53-8.88-15.31-15.31-3.78-6.43-6.43-13.61-7.94-21.55-1.13-8.32-1.7-16.63-1.7-24.95,0-17.77,2.27-36.67,6.8-56.72,4.54-20.41,10.02-40.82,16.45-61.23,6.43-20.41,13.04-40.65,19.85-60.69,7.18-20.03,13.42-38.75,18.71-56.14,4.92-17.01,8.51-33.83,10.77-50.45,2.65-16.63,5.86-33.45,9.64-50.45,1.51-7.18,3.97-14.18,7.37-20.98,3.78-7.18,8.13-13.42,13.04-18.71,5.29-5.29,11.34-9.64,18.15-13.04s14.18-5.1,22.11-5.1c5.67,0,11.53.95,17.58,2.84,6.05,1.51,11.53,3.97,16.45,7.37,4.92,3.02,8.88,6.99,11.91,11.91s4.54,10.77,4.54,17.58c0,4.92-.38,9.83-1.13,14.75-.76,4.54-1.13,9.26-1.13,14.18,0,41.58,2.84,82.61,8.51,123.07,5.67,40.46,14.36,80.72,26.09,120.78,15.5-35.54,28.54-71.84,39.14-108.89,10.58-37.05,20.79-74.29,30.62-111.72,3.02-10.96,5.86-22.12,8.51-33.46,2.65-11.34,6.62-22.3,11.91-32.89,4.92-9.83,10.96-17.77,18.15-23.81,7.56-6.43,17.01-9.64,28.35-9.64,6.81,0,13.61.76,20.41,2.27,7.18,1.13,13.61,3.4,19.28,6.8,5.67,3.02,10.21,7.37,13.61,13.04,3.78,5.29,5.67,12.1,5.67,20.41,0,6.05-.38,12.1-1.13,18.15-.38,5.67-.57,11.53-.57,17.58,0,28.36,1.7,56.72,5.1,85.08,3.78,27.98,8.88,55.95,15.31,83.93,5.29,23.82,9.64,47.63,13.04,71.43,3.78,23.44,5.67,47.25,5.67,71.43l-.02-.03Z" />
+      </symbol>
+    </svg>
 
-        <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item" href="#about">About</a>
-            <a class="navbar-item" href="#projects">Projects</a>
-            <a class="navbar-item" href="#news">News</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a class="navbar__brand" href="#">
+          <span class="navbar__mark" aria-hidden="true">D</span>
+          Dummy Scans
+        </a>
+
+        <nav id="site-menu" class="navbar__menu" aria-label="Main navigation">
+          <a class="navbar__link" href="#about">About</a>
+          <a class="navbar__link" href="#projects">Projects</a>
+          <a class="navbar__link" href="#news">News</a>
+        </nav>
+
+        <div class="navbar__actions">
+          <a
+            class="btn btn--small navbar__cta"
+            href="https://discord.gg/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#icon-discord"></use></svg> Discord
+          </a>
+          <button
+            class="navbar__toggle"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="site-menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero Section -->
+      <section class="hero" id="about">
+        <div class="container">
+          <span class="eyebrow">Scanlation Team</span>
+          <h1 class="hero__title">Welcome to the Scanlation Team!</h1>
+          <p class="hero__summary">
+            We translate and share your favorite manga for free.
+          </p>
+          <div class="hero__actions">
+            <a
+              class="btn"
+              href="https://mangadex.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow on MangaDex
+              <span class="btn__icon" aria-hidden="true">
+                <svg class="icon" aria-hidden="true"><use href="#icon-mangadex"></use></svg>
+              </span>
+            </a>
+            <a
+              class="btn btn--secondary"
+              href="https://discord.gg/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#icon-discord"></use></svg> Join Our Discord
+            </a>
           </div>
         </div>
-      </div>
-    </nav>
+      </section>
 
-    <!-- Hero Section -->
-    <section class="section has-text-centered" id="about">
-      <div class="container">
-        <h1 class="title">Welcome to the Scanlation Team!</h1>
-        <p class="subtitle">
-          We translate and share your favorite manga for free.
-        </p>
-        <div class="buttons is-centered is-flex-wrap-wrap mt-4">
-          <a
-            href="https://mangadex.org/"
-            class="button is-warning"
-            target="_blank"
-          >
-            <i class="icon-mangadex-brands-simple mr-2"></i> Follow on MangaDex
-          </a>
-          <a href="https://discord.gg/" class="button is-link" target="_blank">
-            <i class="bi bi-discord mr-2"></i> Join Our Discord
-          </a>
+      <!-- Projects Section -->
+      <section class="section section--alt" id="projects">
+        <div class="container">
+          <div class="section__header">
+            <span class="eyebrow">Projects</span>
+            <h2 class="section__title">Our Projects</h2>
+          </div>
+          <div class="grid" id="project-list">
+            <p class="status">Loading project list...</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-      <div class="container">
-        <h2 class="title is-3">Our Projects</h2>
-        <div class="columns is-multiline" id="project-list">
-          <p>Loading project list...</p>
+      <!-- News Section -->
+      <section class="section" id="news">
+        <div class="container">
+          <div class="section__header">
+            <span class="eyebrow">News</span>
+            <h2 class="section__title">Announcement</h2>
+          </div>
+          <div class="news-list" id="news-container">
+            <p class="status">Loading news...</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="section" id="news">
-      <div class="container">
-        <h2 class="title is-3">Announcement</h2>
-        <div class="columns is-multiline" id="news-container">
-          <p>Loading news...</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer has-text-centered">
-      <div class="content">
-        <p>
-          Made with 🥖 by wb.
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div>
+            <span class="footer__brand">
+              <span class="navbar__mark" aria-hidden="true">D</span>
+              Dummy Scans
+            </span>
+            <p class="footer__about">
+              We translate and share your favorite manga for free.
+            </p>
+          </div>
+          <div>
+            <h2 class="footer__title">Navigate</h2>
+            <ul class="footer__list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#news">News</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__title">Follow</h2>
+            <ul class="footer__list">
+              <li>
+                <a href="https://mangadex.org/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-mangadex"></use></svg> MangaDex
+                </a>
+              </li>
+              <li>
+                <a href="https://www.mangaupdates.com/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-baka-updates"></use></svg> Baka-Updates
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-discord"></use></svg> Discord
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer__legal">
+          &copy; <span data-year></span> Dummy Scans. Made with 🥖 by wb.
         </p>
       </div>
     </footer>
 
-    <!-- External JavaScript File -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
